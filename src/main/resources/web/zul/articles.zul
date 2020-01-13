@@ -1,0 +1,2 @@
+<div id="articles-binder" viewModel="@id('vm') @init('org.zkoss.demo.forum.viewmodel.ArticleListVM')">
+</div>

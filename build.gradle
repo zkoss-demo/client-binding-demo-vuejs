@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE")
+    }
+}
+
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'org.zkoss.demo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    maven { url "https://mavensync.zkoss.org/maven2" }
+    maven { url "https://mavensync.zkoss.org/eval" }
+    maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" } //for jasper reports
+    mavenCentral()
+}
+
+dependencies {
+    def withoutSlf4J = { exclude group: "org.slf4j", module: "slf4j-jdk14" }
+    compile "org.zkoss.zkspringboot:zkspringboot-starter:${zkspringbootVersion}"
+    compile "org.zkoss.zk:zk:${zkVersion}", withoutSlf4J
+    compile "org.zkoss.zk:zkbind:${zkVersion}", withoutSlf4J
+    compile "org.zkoss.zk:zkmax:${zkVersion}", withoutSlf4J
+    compile "org.zkoss.zk:zkplus:${zkVersion}", withoutSlf4J
+    compile 'org.zkoss.zkforge:ckez:4.4.6.3' // for ZK-ckeditor
+    compile 'org.hsqldb:hsqldb:2.4.0'
+    //comment out the below for embedded tomcat
+    compile "org.springframework.boot:spring-boot-starter-web"
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    testCompile "junit:junit:${junitVersion}"
+}
+
+//test {
+//	useJUnitPlatform()
+//}
+
+bootRun {
+    main = 'org.zkoss.demo.forum.ForumApplication'
+}

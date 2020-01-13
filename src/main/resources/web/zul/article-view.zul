@@ -1,0 +1,21 @@
+<window title="Article" border="normal" width="800px" height="100%"
+		viewModel="@id('vm') @init('org.zkoss.demo.forum.viewmodel.ArticleVM')"
+		position="center,center" closable="true"
+		action="show: slideDown;hide: slideUp"
+		contentStyle="overflow:auto">
+	<image hflex="1" src="@load(vm.currentArticle.thumbnail)" />
+	<separator />
+	<hlayout>
+		<div hflex="1">
+			<label value="@load(vm.currentArticle.subject)"/>
+		</div>
+		<div hflex="min">
+			@
+			<label value="@load(vm.currentArticle.userID.name)"/>
+		</div>
+	</hlayout>
+	<separator/>
+	<div>
+		<html content="@load(vm.currentArticle.content)"/>
+	</div>
+</window>

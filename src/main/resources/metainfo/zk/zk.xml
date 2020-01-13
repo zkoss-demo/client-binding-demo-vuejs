@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>zkspringboot-demo</config-name>
+	<listener>
+		<listener-class>org.zkoss.zkmax.au.websocket.WebSocketWebAppInit</listener-class>
+	</listener>
+	<library-property>
+		<name>org.zkoss.web.servlet.http.embedded.enabled</name>
+		<value>true</value>
+	</library-property>
+</zk>
