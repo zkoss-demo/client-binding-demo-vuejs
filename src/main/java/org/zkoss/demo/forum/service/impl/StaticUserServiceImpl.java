@@ -36,11 +36,6 @@ public class StaticUserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean addNewUser(String account, String password, String name) {
-		return false;
-	}
-
-	@Override
 	public String getName(int userId) {
 		for (User user : this.users) {
 			if (userId == user.getUid())

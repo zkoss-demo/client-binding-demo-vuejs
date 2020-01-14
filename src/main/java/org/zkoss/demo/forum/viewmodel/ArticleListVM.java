@@ -37,7 +37,7 @@ public class ArticleListVM {
 	@Command
 	@NotifyChange("articles")
 	public void loadArticles() {
-		articles = articleService.getRecent10Articles();
+		articles = articleService.getRecentArticles();
 	}
 
 	@Command

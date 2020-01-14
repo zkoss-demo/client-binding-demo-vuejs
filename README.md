@@ -21,4 +21,4 @@ License
 -------
 
 * Demo Code - Apache License 2.0
-* react-shopping-cart - MIT
+* Bootstrap Album example - MIT

@@ -11,10 +11,6 @@ public class ForumApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ForumApplication.class, args);
 	}
-	@GetMapping("/signin")
-	public String resourcesExample() {
-		return "signin";
-	}
 	@GetMapping("/articles")
 	public String articles() {
 		return "articles";
