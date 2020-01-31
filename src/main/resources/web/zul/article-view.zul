@@ -11,7 +11,7 @@
 		</div>
 		<div hflex="min">
 			@
-			<label value="@load(vm.currentArticle.userID.name)"/>
+			<label value="@load(vm.currentArticle.user.name)"/>
 		</div>
 	</hlayout>
 	<separator/>
