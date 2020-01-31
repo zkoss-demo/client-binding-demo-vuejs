@@ -1,6 +1,5 @@
 package org.zkoss.demo.forum.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,9 +7,9 @@ import java.util.Date;
  */
 public class Article {
 	//for demo
-	public Article(int id, User userID, String subject, String thumbnail, String content, Date publishedTime) {
+	public Article(int id, User user, String subject, String thumbnail, String content, Date publishedTime) {
 		this.uid = id;
-		this.userID = userID;
+		this.user = user;
 		this.subject = subject;
 		this.thumbnail = thumbnail;
 		this.content = content;
@@ -18,7 +17,7 @@ public class Article {
 	}
 
 	private int uid;
-	private User userID;
+	private User user;
 	private String subject;
 	private String thumbnail;
 	private String content;
@@ -36,12 +35,12 @@ public class Article {
 		this.uid = uid;
 	}
 
-	public User getUserID() {
-		return userID;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserID(User user_id) {
-		this.userID = user_id;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public String getSubject() {

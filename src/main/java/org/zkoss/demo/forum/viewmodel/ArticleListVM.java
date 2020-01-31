@@ -51,5 +51,4 @@ public class ArticleListVM {
 	public List<Article> getArticles() {
 		return articles;
 	}
-
 }

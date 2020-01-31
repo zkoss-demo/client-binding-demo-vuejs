@@ -15,9 +15,6 @@ public class DevelopmentConfig {
 	private static Logger logger = LoggerFactory.getLogger(DevelopmentConfig.class);
 	@PostConstruct
 	public void initDevelopmentProperties() throws Exception {
-		logger.info("**************************************************************");
-		logger.info("**** ZK-Springboot-Demo: development configuration active ****");
-		logger.info("**************************************************************");
 		//disable various caches to avoid server restarts
 		Library.setProperty("org.zkoss.zk.ZUML.cache", "false");
 		Library.setProperty("org.zkoss.zk.WPD.cache", "false");
