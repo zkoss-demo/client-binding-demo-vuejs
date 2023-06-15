@@ -13,7 +13,9 @@ Run the Demo
 
 with maven:
 
+```
 mvn clean spring-boot:run
+```
 
 with gradle (broken)
 
